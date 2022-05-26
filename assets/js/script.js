@@ -7,12 +7,22 @@ var createTaskHandler = function (event) {
     var taskNameInput = document.querySelector("input[name='task-name']").value;
     var taskTypeInput = document.querySelector("select[name='task-type']").value;
 
-    var formInputValues = {
-        name: taskNameInput,
-        type: taskTypeInput
-    };
+    if (!taskNameInput) {
+        alert("Hmmmm.....you seemed to have left the task empty.");
+        return;
+    }
+    else if (!taskTypeInput) {
+        alert("You forgot to add a type!")
+    }
+    else {
 
-    createListItem(formInputValues);
+        var formInputValues = {
+            name: taskNameInput,
+            type: taskTypeInput
+        };
+
+        createListItem(formInputValues);
+    }
 };
 
 //Function to create list item with data passed in arguments
