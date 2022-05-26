@@ -13,6 +13,8 @@
 
 _Simple task list/todo application using vanilla Javascript. Created following along with class modules._
 
+  This page is currently deployed on [github pages](https://amber-robeck.github.io/taskinator/ "deployed link")
+
 ---
 
   ## Table of Contents
@@ -34,6 +36,7 @@ Use this application to save your tasks!
 
 Currently this application is able to:
 
+* Create a task with a task type
 
 
 
@@ -41,11 +44,12 @@ Currently this application is able to:
 
   ## Installation
 
-This project is ran through Node.js, using an express server.
+This front-end project was created using javascript.
 * `clone the repository` 
+* `run locally by opening index.html`
 
 
-  ---
+---
 
   ## Walk-through
 
@@ -56,7 +60,7 @@ Currently I do not have any walkthrough videos for this application.
 
 
 
-![GIF of page]( "GIF of page")
+![GIF of page](./assets/images/Taskinator.gif "GIF of page")
 
 
   ---
@@ -79,13 +83,16 @@ Currently I do not have any screenshots of this application.
 
 Technologies or packages used in this application:
 
-
+* VS Code
+* Vanilla Javascript
 
 
 ---
 
 
   ## Things I have learned
+
+_In this application I was following along with an inclass module as a refresher to manipulating the DOM with vanilla javascript. Things to remember, always make sure the data I am being given is what I think it was as I had a minor bug displaying data by trying to access an object key that didn't exsist._
 
 ---
 
