@@ -16,11 +16,6 @@ var createTaskHandler = function (event) {
         return;
     }
     else {
-        userForm.reset();
-
-        // setting values back to original state
-        document.querySelector("input[name='task-name']").value = "";
-        document.querySelector("select[name='task-type']").selectedIndex = 0;
 
         var formInputValues = {
             name: taskNameInput,
@@ -28,12 +23,19 @@ var createTaskHandler = function (event) {
         };
 
         createListItem(formInputValues);
+
+        // userForm.reset();
+
+        // // setting values back to original state
+        // document.querySelector("input[name='task-name']").value = "";
+        // document.querySelector("select[name='task-type']").selectedIndex = 0;
     }
 };
 
 //Function to create list item with data passed in arguments
 var createListItem = function (data) {
     // create list item
+    console.log(data)
     var taskItem = document.createElement("li");
     taskItem.className = "task-item";
 
@@ -42,7 +44,7 @@ var createListItem = function (data) {
     taskInfo.className = "task-info";
 
     // add HTML content to div
-    taskInfo.innerHTML = "<h3 class='task-name'>" + data.name + "</h3><span class='task-type'>" + data.value + "</span>";
+    taskInfo.innerHTML = "<h3 class='task-name'>" + data.name + "</h3><span class='task-type'>" + data.type + "</span>";
     taskItem.appendChild(taskInfo);
 
     // add entire list item to list
