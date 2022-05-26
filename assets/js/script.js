@@ -12,9 +12,15 @@ var createTaskHandler = function (event) {
         return;
     }
     else if (!taskTypeInput) {
-        alert("You forgot to add a type!")
+        alert("You forgot to add a type!");
+        return;
     }
     else {
+        userForm.reset();
+
+        // setting values back to original state
+        document.querySelector("input[name='task-name']").value = "";
+        document.querySelector("select[name='task-type']").selectedIndex = 0;
 
         var formInputValues = {
             name: taskNameInput,
