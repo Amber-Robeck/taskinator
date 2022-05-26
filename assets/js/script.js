@@ -24,18 +24,17 @@ var createTaskHandler = function (event) {
 
         createListItem(formInputValues);
 
-        // userForm.reset();
+        userForm.reset();
 
-        // // setting values back to original state
-        // document.querySelector("input[name='task-name']").value = "";
-        // document.querySelector("select[name='task-type']").selectedIndex = 0;
+        // setting values back to original state
+        document.querySelector("input[name='task-name']").value = "";
+        document.querySelector("select[name='task-type']").selectedIndex = 0;
     }
 };
 
 //Function to create list item with data passed in arguments
 var createListItem = function (data) {
     // create list item
-    console.log(data)
     var taskItem = document.createElement("li");
     taskItem.className = "task-item";
 
